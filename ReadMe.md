@@ -23,5 +23,7 @@
 3. Navigate to this folder and run `npm test`.
 
 #### Deployed Link
+https://pure-depths-10529.herokuapp.com/
 
 #### Framework of choice
+React
