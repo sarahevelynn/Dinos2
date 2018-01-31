@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
-import {SkillsList} from "./SkillsList";
+import React from "react";
+import {SkillList} from './SkillList';
 
-const numbers = [1,2,3];
-
-
-export class Profiles extends Component {
+export class Profiles extends React.Component {
   clickHandler(event) {
     if (event.target.parentNode.classList.contains("profile-header")) {
       event.target.parentNode.parentNode.childNodes[1].classList.toggle(
@@ -17,13 +14,13 @@ export class Profiles extends Component {
       return (
         <li className="profile-card" onClick={this.clickHandler}>
           <header className="profile-header">
-            <img src={item.image} />
+            <img src={item.image} alt="balls"/>
             <h2>{item.name}</h2>
           </header>
           <section className="skills-container hidden">
             <h4>Skills</h4>
             <ul className="skills-list">
-              <SkillsList key={item} item={item} />
+            <SkillList item={item} />
             </ul>
           </section>
         </li>
